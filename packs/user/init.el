@@ -6,8 +6,8 @@
 (set-frame-font default-font nil t)
 
 (global-linum-mode t)
-(global-hl-line-mode 1)
-
+(when (display-graphic-p)
+  (global-hl-line-mode 1))
 
 ;;; Always have cursor above a number of lines from bottom
 ;;(setq scroll-margin 10)
