@@ -106,7 +106,7 @@
 ;;;
 
 ;;default live packs
-(setq live-packs '("core" "themes" "power" "clojure" "programming" "notes"))
+(setq live-packs '("core" "themes" "power" "clojure" "programming" "notes" "comms"))
 
 ;; Load all packs - Power Extreme!
 (live-load-all-packs live-packs)

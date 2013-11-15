@@ -1,8 +1,9 @@
-# Emacs Lightsaber #
+# Emacs Totem #
 
-My own.
+As in Inception totem.  Although this one is designed to keep you in the
+emacs dream, one config for all of your machines.
 
-Always evolving.
+Clone into .emacs.d.
 
 Based on emacs-live and ghoseb/dotemacs.
 
