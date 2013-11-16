@@ -1,6 +1,6 @@
 (setq custom-theme-directory (live-pack-lib-dir))
 
-;;; uncomment the following if you want zenburn
+;;; uncomment just the one you want
 (load-theme 'solarized-dark)
 ;;(load-theme 'tomorrow-night t)
 ;;(load-theme 'zenburn t)
