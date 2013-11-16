@@ -6,7 +6,7 @@
 (set-frame-font default-font nil t)
 
 (global-linum-mode t)
-(when (display-graphic-p)
+(when (or (display-graphic-p) (eq system-type 'darwin))
   (global-hl-line-mode 1))
 
 ;;; Always have cursor above a number of lines from bottom
