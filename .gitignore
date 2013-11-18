@@ -1,3 +1,4 @@
 tmp
 etc/emacs-custom.el
 etc/projectile-bookmarks.eld
+packs/comms/config/smtpmail-conf.el
