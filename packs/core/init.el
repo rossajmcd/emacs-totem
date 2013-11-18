@@ -18,6 +18,7 @@
 (live-load-config-file "exec-path-from-shell-conf.el")
 (live-load-config-file "powerline-conf.el")
 (live-load-config-file "help-fns+-conf.el")
+(live-load-config-file "dirtree-conf.el")
 
 (when (eq system-type 'darwin)
   (live-load-config-file "osx.el"))
