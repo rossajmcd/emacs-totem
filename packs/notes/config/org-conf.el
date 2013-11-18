@@ -17,3 +17,9 @@
 
 ;; http://orgmode.org/manual/Setting-up-capture.html
 (setq org-default-notes-file (concat org-directory "/inbox.org"))
+
+;; tags config
+(setq org-tag-alist '((:startgroup . nil)
+	                  ("@office" . ?o) ("@home" . ?h) 
+	                  (:endgroup . nil)
+	                  ("laton" . ?l) ("phone" . ?p) ("reading" . ?r)))
