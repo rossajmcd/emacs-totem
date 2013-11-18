@@ -5,9 +5,8 @@
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
-(setq org-directory "~/Dropbox/Org")
-(setq org-agenda-files (list (concat org-directory "/index.org")
-                             (concat org-directory "/inbox.org")))
+(setq org-directory "~/.org")
+(setq org-agenda-files (list (concat org-directory "/gtd.org")))
 
 ;; http://orgmode.org/manual/Closing-items.html
 (setq org-log-done 'time)
