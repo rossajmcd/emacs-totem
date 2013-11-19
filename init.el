@@ -78,9 +78,6 @@
   ; user is last
   (live-load-pack "user"))
 
-(defun live-user-first-name ()
-  (car  (split-string user-full-name)))
-
 ;;;
 ;;; Entry point
 ;;;
