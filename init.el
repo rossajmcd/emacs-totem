@@ -89,13 +89,14 @@
             (concat (live-user-first-name) ", this could be the beginnings of a great hacking session.")
             (concat (live-user-first-name) ", never see what has been done, only see what remains to be done.")
             (concat (live-user-first-name) ", turn your head towards the Sun and the shadows will fall behind you.")
-            (concat "Learn the rules, " (live-user-first-name) ", so you know how to break them.")))
+            (concat "Learn the rules, " (live-user-first-name) ", so you know how to break them.")
+            (concat (live-user-first-name) ", I'm kind of a big deal.")))
 
 (defun live-welcome-message ()
   (nth (random (length live-welcome-messages)) live-welcome-messages))
 
 (setq initial-scratch-message (concat ";;
-;;([[[[[]o[+-{IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIID 
+;;([[[[[]o[+-{IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIID
 ;;
 ;; " (live-welcome-message) "
 
