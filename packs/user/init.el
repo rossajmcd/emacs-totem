@@ -1,8 +1,11 @@
 ;;; change this according to your needs
 ;;; you can get "Source Code Pro" from http://sourceforge.net/projects/sourcecodepro.adobe/
 ;;; it's a great coding font
-;; these two are joined, activate or de-activate together
-(defvar default-font "Source Code Pro 12" "My default Emacs font.")
+(defun font-candidate (&rest fonts)
+    "Return the first available font."
+    (--first (find-font (font-spec :name it)) fonts))
+
+(defvar default-font (font-candidate '"Source Code Pro 12" "DejaVu Sans Mono-10:weight=normal"))
 (set-frame-font default-font nil t)
 
 (global-linum-mode t)
