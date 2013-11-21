@@ -1,5 +1,9 @@
 (setq custom-theme-directory (live-pack-lib-dir))
 
+(custom-set-variables
+ '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" default)))
+ '(tool-bar-mode nil))
+
 ;;; uncomment just the one you want
 (load-theme 'solarized-dark)
 ;;(load-theme 'tomorrow-night t)
