@@ -26,3 +26,8 @@
 	                  ("@office" . ?o) ("@home" . ?h) 
 	                  (:endgroup . nil)
 	                  ("laton" . ?l) ("phone" . ?p) ("reading" . ?r)))
+
+;; work tagged todo search
+(setq org-agenda-custom-commands
+  '(("h" tags-todo "+@HOME")
+    ("o" tags-todo "+@OFFICE")))
