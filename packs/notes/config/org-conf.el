@@ -12,6 +12,9 @@
 (setq org-log-done 'time)
 (setq org-log-done 'note)
 
+;; tie diary in to org mode as it is pulled in to agenda anyhow
+(setq diary-file "~/.org/diary")
+
 ;; http://orgmode.org/manual/Weekly_002fdaily-agenda.html
 (setq org-agenda-include-diary t)
 
