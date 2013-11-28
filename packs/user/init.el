@@ -44,5 +44,7 @@
 ;;([[[[[]o[+-{IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIID
 ;;
 ;; " (live-welcome-message) "
+;;
+;; emacs totem v0.2.0
 
 "))
