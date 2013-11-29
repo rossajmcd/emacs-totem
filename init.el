@@ -57,6 +57,14 @@
   (let* ((config-dir (live-pack-config-dir)))
     (load-file (concat config-dir f-name))))
 
+(defun live-load-config-file-conditional (f-name)
+  "Load the config file with name f-name in the current pack"
+  (let* ((config-dir (live-pack-config-dir)))
+    (when (file-exists-p (concat config-dir f-name))
+      (load-file (concat config-dir f-name))
+    )
+    ))
+
 (defun live-use-packs (pack-list)
   "Use the packs in pack-list - overrides the defaults and any
   previous packs added with live-add-packs."
