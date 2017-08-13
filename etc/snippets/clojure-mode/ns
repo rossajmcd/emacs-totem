@@ -1,6 +1,0 @@
-#name: ns
-# --
-(ns ^{:doc "${1:doc-string}"
-      :author "Your Name <your@email.com>"}
-  ${2:name}
-  $0)

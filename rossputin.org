@@ -1,0 +1,67 @@
+#+TITLE: Rossputin’s Literate Emacs Configuration
+
+* About
+Emacs Prelude - Master branch commit 9fb83df from repo : https://github.com/bbatsov/prelude.
+Use melpa 'package-install' to enhance.
+
+Rename this file to yourname.org and place it in ~/path/to/prelude/personal/prelude.
+Place an init.el in the same location with the following code pointing to your org file.
+
+(org-babel-load-file "~/.emacs.d/personal/preload/yourfile.org")
+
+* Personal
+#+BEGIN_SRC emacs-lisp
+  (setq user-full-name "Ross McDonald"
+        user-mail-address "rossajmcd@gmail.com")
+#+END_SRC
+
+* Behaviour
+#+BEGIN_SRC emacs-lisp
+  (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
+#+END_SRC
+
+* Look and feel
+TODO: broken in terminal emacs so stick to default zenburn
+#+BEGIN_SRC emacs-lisp
+  ;;(setq prelude-theme 'solarized-dark)
+#+END_SRC
+
+* Org and GTD
+Heavily inspired by
+https://emacs.cafe/emacs/orgmode/gtd/2017/06/30/orgmode-gtd.html
+#+BEGIN_SRC emacs-lisp
+  (setq org-directory "~/.org")
+#+END_SRC
+
+TODO: not sure I want someday picked up by agenda etc
+#+BEGIN_SRC emacs-lisp
+  (setq org-agenda-files
+        (mapcar (lambda (path) (concat org-directory path))
+                '("/gtd/gtd.org"
+                  "/gtd/inbox.org"
+                  "/gtd/someday.org"
+                  "/gtd/tickler.org")))
+
+  (setq org-log-done 'time)
+  (setq org-src-fontify-natively t)
+  (setq org-use-speed-commands t)
+  (setq org-capture-templates
+        '(("t" "Todo [inbox]" entry
+           (file+headline "~/.org/gtd/inbox.org" "Tasks")
+           "* TODO %i%?")
+          ("T" "Tickler" entry
+           (file+headline "~/.org/gtd/tickler.org" "Tickler")
+           "* %i%? \n %^t")))
+
+  (setq org-todo-keywords '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
+  (setq org-agenda-custom-commands
+        '(("@" "Contexts"
+           ((tags-todo "@email"
+                       ((org-agenda-overriding-header "Emails")))
+            (tags-todo "@phone"
+                       ((org-agenda-overriding-header "Phone")))))))
+  (setq org-clock-persist t)
+  (org-clock-persistence-insinuate)
+  (setq org-refile-targets '((nil :maxlevel . 5) (org-agenda-files :maxlevel . 5)))
+  (add-hook 'after-init-hook 'org-agenda-list)
+#+END_SRC
